@@ -1,0 +1,42 @@
+.NavBar{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(59, 122, 8);
+    align-items: center;
+    border-bottom: 2px solid gold;
+    border-top: 2px solid gold;
+}
+.NavLinkBox{
+    width: 20%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.NavLink{
+    color: white;
+    text-decoration: none;
+}
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

@@ -1,17 +1,18 @@
 <div class="NavBar">
     <div class="NavLinkBox">
-        <a class="hover-underline-animation NavLink" href="#">
+        <a routerLink="Spiele" class="hover-underline-animation-orange orange NavLink" (click)="makeOrange($event)">
             Spiele
         </a>
     </div>
     <div class="NavLinkBox">
-        <a class="hover-underline-animation NavLink" href="#">
+        <a routerLink="Konto" class="hover-underline-animation-blue blue NavLink" (click)="makeOrange($event)">
             Konto
         </a> 
     </div>
     <div class="NavLinkBox">
-        <a class="hover-underline-animation NavLink" href="#">
+        <a routerLink="Login" class="hover-underline-animation-red red NavLink"(click)="makeOrange($event)">
             Log in
         </a>
     </div>
+    <script src="./navbar.component.js"></script>
 </div>

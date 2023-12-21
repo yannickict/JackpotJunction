@@ -6,6 +6,7 @@
     align-items: center;
     border-bottom: 2px solid gold;
     border-top: 2px solid gold;
+    box-shadow: 2px 2px 15px gold;
 }
 .NavLinkBox{
     width: 20%;
@@ -19,12 +20,14 @@
     color: white;
     text-decoration: none;
 }
-.hover-underline-animation {
+.hover-underline-animation-red, .hover-underline-animation-blue, 
+.hover-underline-animation-orange {
     display: inline-block;
     position: relative;
     color: white;
   }
-.hover-underline-animation::after {
+.hover-underline-animation-red::after, .hover-underline-animation-orange::after,
+.hover-underline-animation-blue::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -32,11 +35,29 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: white;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-  .hover-underline-animation:hover::after {
+  .hover-underline-animation-blue:hover::after, .hover-underline-animation-orange:hover::after,
+  .hover-underline-animation-red:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+  .hover-underline-animation-red::after{
+    background-color: darkred;
+  }
+  .hover-underline-animation-blue::after{
+    background-color: darkblue;
+  }
+  .hover-underline-animation-orange::after{
+    background-color: orange;
+  }
+  .marked-orange{
+    color: orange;
+  }
+  .marked-red{
+    color: darkred;
+  }
+  .marked-blue{
+    color: darkblue;
   }

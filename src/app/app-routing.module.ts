@@ -14,8 +14,8 @@ const routes: Routes = [
   { path: "Spiele/Roulette", component: RouletteComponent },
   { path: "Spiele/Slots", component: SlotsComponent },
   { path: "Konto", component: KontoComponent },
-  { path: "Konto/Register", component: RegisterComponent },
-  { path: "Login", component: LoginComponent }
+  { path: "Login", component: LoginComponent },
+  { path: "Login/Register", component: RegisterComponent }
 ];
 
 @NgModule({

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-konto',
-  templateUrl: './konto.component.html',
-  styleUrl: './konto.component.css'
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.css'
 })
-export class KontoComponent {
+export class RegisterComponent {
   submitForm(event: Event): void {
     event.preventDefault();
     alert("asd");

@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { BlackjackComponent } from './blackjack/blackjack.component';
 import { RouletteComponent } from './roulette/roulette.component';
 import { SlotsComponent } from './slots/slots.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: "Spiele", component: SpieleComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "Spiele/Roulette", component: RouletteComponent },
   { path: "Spiele/Slots", component: SlotsComponent },
   { path: "Konto", component: KontoComponent },
+  { path: "Konto/Register", component: RegisterComponent },
   { path: "Login", component: LoginComponent }
 ];
 

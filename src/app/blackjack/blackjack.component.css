@@ -1,0 +1,40 @@
+.BlackjackContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.PokerTable{
+    width: 70%;
+}
+.ButtonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 80px;
+    z-index: 2;
+}
+.PlayButton{
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 40px;
+    width: 200px;
+}
+.PlayButton:hover{
+    background-color: rgb(150, 0, 0);
+    cursor:pointer;
+}
+.ChipContainer{
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 6%;
+}
+.ChipImg{
+    width: 100%;
+    height: auto;
+    z-index: 3;
+}

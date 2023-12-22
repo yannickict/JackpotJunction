@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './blackjack.component.css'
 })
 export class BlackjackComponent {
-
+  BetChip(amount: string){
+    alert(amount)
+  }
 }

@@ -1,5 +1,7 @@
 <div class="FormContainer">
   <h1>Registrieren</h1>
+  <div class="SuccessMessage hidden" id="SuccessMessageBox">User registriert erfolgreich</div>
+  <div class="ErrorMessage hidden" id="ErrorMessageBox">Error:</div>
   <form (submit)="submitForm($event)">
     <label for="UsernameRegisterInput">Username</label>
     <input class="LoginInput" id="UsernameRegisterInput" type="text" name="username" />
@@ -11,6 +13,6 @@
   </form>
 
   <div class="RegisterContainer">
-    <a routerLink="Register">Log In</a>
+    <a routerLink="/Login">Log In</a>
   </div>
 </div>

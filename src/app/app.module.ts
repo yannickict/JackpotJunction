@@ -7,13 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SpieleComponent } from './spiele/spiele.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SpieleComponent,
-    LoginComponent  
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
   ],
   bootstrap: [AppComponent]
 })

@@ -16,13 +16,22 @@ export class RegisterComponent {
     event.preventDefault();
 
     // Retrieve values from input fields
-    this.username = (document.getElementById("UsernameRegisterInput") as HTMLInputElement)?.value;
-    this.password = (document.getElementById("PasswordRegisterInput") as HTMLInputElement)?.value;
+    const usernameInput = document.getElementById("UsernameRegisterInput") as HTMLInputElement;
+    const passwordInput = document.getElementById("PasswordRegisterInput") as HTMLInputElement;
+    const successMessageBox = document.getElementById("SuccessMessageBox") as HTMLInputElement;
+    const errorMessageBox = document.getElementById("ErrorMessageBox") as HTMLInputElement;
 
+  // Checking if the elements exist before accessing their values
+  if (usernameInput && passwordInput) {
+    this.username = usernameInput.value;
+    this.password = passwordInput.value;
+  } else {
+    console.error("Username or password input element not found");
+  }
     // Prepare the data
     const formData = {
-      username: 'hans',
-      password: 'password'
+      username: this.username,
+      password: this.password
     };
 
     // Make an HTTP POST request to your PHP file
@@ -32,10 +41,15 @@ export class RegisterComponent {
           console.log('Response object:', response);
 
           if (response.status === 'success') {
-            // Handle success (e.g., redirect, show success message)
+            usernameInput!.value = "";
+            passwordInput!.value = "";
+            successMessageBox?.classList.remove("hidden");
+            errorMessageBox?.classList.add("hidden");
             console.log('Data received successfully');
           } else if (response.status === 'error') {
-            // Handle error (e.g., display error message)
+            errorMessageBox!.innerText = "Error: " + response.message;
+            errorMessageBox?.classList.remove("hidden");
+            successMessageBox?.classList.add("hidden");
             console.error('Error:', response.message);
           }
         },

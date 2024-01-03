@@ -1,18 +1,39 @@
 <div class="NavBar">
-    <div class="NavLinkBox">
-        <a routerLink="Spiele" class="hover-underline-animation-orange marked-orange orange NavLink" (click)="makeOrange($event)">
-            Spiele
-        </a>
-    </div>
-    <div class="NavLinkBox">
-        <a routerLink="Konto" class="hover-underline-animation-green green NavLink" (click)="makeOrange($event)">
-            Konto
-        </a> 
-    </div>
-    <div class="NavLinkBox">
-        <a routerLink="Login" class="hover-underline-animation-gree red NavLink"(click)="makeOrange($event)">
-            Log in
-        </a>
-    </div>
-    <script src="./navbar.component.js"></script>
+  <div class="NavLinkBox">
+    <a
+      routerLink="Spiele"
+      class="hover-underline-animation-orange marked-orange orange NavLink"
+      (click)="makeOrange($event)"
+    >
+      Spiele
+    </a>
+  </div>
+  <div class="NavLinkBox">
+    <a
+      routerLink="Konto"
+      class="hover-underline-animation-green green NavLink"
+      (click)="makeOrange($event)"
+    >
+      Konto
+    </a>
+  </div>
+  <div class="NavLinkBox" *ngIf="!isLoggedin">
+    <a
+      routerLink="Login"
+      class="hover-underline-animation-red red NavLink"
+      (click)="makeOrange($event)"
+    >
+      Log in
+    </a>
+  </div>
+  <div class="NavLinkBox" *ngIf="isLoggedin">
+    <p *ngIf="isLoggedin">Welcome, {{ this.user?.userName }}!</p>
+    <a
+      routerLink="Login"
+      class="hover-underline-animation-red red NavLink logout"
+      (click)="makeOrange($event)"
+    >
+      Logout
+    </a>
+  </div>
 </div>

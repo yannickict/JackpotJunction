@@ -8,6 +8,8 @@ h1{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 50%;
+    transform: translate(50%);
 }
 label{
     color: white;
@@ -71,4 +73,19 @@ a{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.SuccessMessage{
+  background-color: green;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+.ErrorMessage{
+  background-color: red;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+.hidden{
+  display: none;
 }

@@ -21,9 +21,6 @@ export class LoginComponent {
     const passwordInput = document.getElementById(
       'PasswordInput'
     ) as HTMLInputElement;
-    const successMessageBox = document.getElementById(
-      'SuccessMessageBox'
-    ) as HTMLInputElement;
     const errorMessageBox = document.getElementById(
       'ErrorMessageBox'
     ) as HTMLInputElement;
@@ -50,14 +47,12 @@ export class LoginComponent {
           if (response.status === 'success') {
             usernameInput.value = '';
             passwordInput.value = '';
-            successMessageBox?.classList.remove('hidden');
             errorMessageBox?.classList.add('hidden');
             //i want to add response.id to a cookie
             console.log(response.message);
           } else if (response.status === 'error') {
             errorMessageBox!.innerText = 'Error: ' + response.message;
             errorMessageBox?.classList.remove('hidden');
-            successMessageBox?.classList.add('hidden');
             console.error('Error:', response.message);
           }
         },
